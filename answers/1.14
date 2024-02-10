@@ -2,3 +2,5 @@ docker stop front-app
 docker stop back-app
 docker rm front-app
 docker rm back-app
+docker rmi front
+docker rmi back
