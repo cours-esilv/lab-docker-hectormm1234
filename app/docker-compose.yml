@@ -1,7 +1,13 @@
 version: '3'
 services:
   back-app:
-    # Configuration as before
+    image: hectormm24/mlops_td3:v1
+    ports:
+      - "5000:5000"
+    environment:
+      - CURRENT_ENVIRONMENT=development
+    volumes:
+      - back-data:/app/data
   front-app:
     image: hectormm24/mlops_td3_front:v2
     ports:
