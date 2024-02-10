@@ -1,0 +1,2 @@
+docker run -d --name back-app -p 5000:5000 yourusername/back-app:v1
+docker run -d --name front-app -p 8081:80 -e WS_BACK_URL=http://host.docker.internal:5000 yourusername/front-app:v1
