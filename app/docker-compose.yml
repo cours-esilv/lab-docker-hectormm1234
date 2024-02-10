@@ -1,8 +1,12 @@
 version: '3'
 services:
   back-app:
-    image: hectormm24/mlops_td3:v1
+    # Configuration as before
+  front-app:
+    image: hectormm24/mlops_td3_front:v2
     ports:
-      - "5000:5000"
+      - "8081:80"
     environment:
-      - CURRENT_ENVIRONMENT=development
+      - WS_BACK_URL=http://back-app:5000
+volumes:
+  back-data:
