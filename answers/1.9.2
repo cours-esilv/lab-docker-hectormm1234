@@ -1,3 +1,1 @@
-docker stop sharp_brattain
-docker rename sharp_brattain mlops_td3
-docker start mlops_td3
+docker run -d --name <new_container_name> -p 8080:5000 -e CURRENT_ENVIRONMENT=development hectormm24/app:v1
